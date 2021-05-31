@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tank demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <script src="script/game.js" type="module"></script>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+      }
+    
+      body {
+        overflow: hidden;
+      }
+
+      #touchcontroller {
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+        background: rgba(100, 100, 100, 0.6);
+        border: 3px solid rgba(50, 50, 50, 0.6);
+        display: none;
+      }
+
+      body.touch #touchcontroller {
+        display: block;
+      }
+      #login {
+        position: absolute;
+        margin: 20px;
+        border: 2px solid gray;
+        background: white;
+        padding: 20px;
+        display: none;
+      }
+      #login.show {
+        display: block;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="login">
+      <form id="login-form">
+        <p>Username</p>
+        <input type="text" name="username" placeholder="@user:matrix.org"><br>
+        <p>Password</p>
+        <input type="password" name="password"><br>
+        <p class="lobby-error"></p>
+        <input type="submit" value="Login">
+      </form>    
+    </div>
+    <div id="touchcontroller"></div>
+  </body>
+</html>
